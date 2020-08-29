@@ -1106,17 +1106,17 @@ Sidebar.prototype.addGeneralPalette = function(expand)
 	 	this.createVertexTemplateEntry('shape=xor;whiteSpace=wrap;html=1;', 60, 80, '', 'Or', null, null, 'logic or'),
 	 	this.createVertexTemplateEntry('shape=or;whiteSpace=wrap;html=1;', 60, 80, '', 'And', null, null, 'logic and'),
 	 	this.createVertexTemplateEntry('shape=dataStorage;whiteSpace=wrap;html=1;fixedSize=1;', 100, 80, '', 'Data Storage'),    
-	 	this.addEntry('curve', mxUtils.bind(this, function()
-	 	{
-			var cell = new mxCell('', new mxGeometry(0, 0, 50, 50), 'curved=1;endArrow=classic;html=1;');
-			cell.geometry.setTerminalPoint(new mxPoint(0, 50), true);
-			cell.geometry.setTerminalPoint(new mxPoint(50, 0), false);
-			cell.geometry.points = [new mxPoint(50, 50), new mxPoint(0, 0)];
-			cell.geometry.relative = true;
-			cell.edge = true;
-			
-		    return this.createEdgeTemplateFromCells([cell], cell.geometry.width, cell.geometry.height, 'Curve');
-	 	})),
+	 	//this.addEntry('curve', mxUtils.bind(this, function()
+	 	//{
+	//		var cell = new mxCell('', new mxGeometry(0, 0, 50, 50), 'curved=1;endArrow=classic;html=1;');
+	//		cell.geometry.setTerminalPoint(new mxPoint(0, 50), true);
+	//		cell.geometry.setTerminalPoint(new mxPoint(50, 0), false);
+	//		cell.geometry.points = [new mxPoint(50, 50), new mxPoint(0, 0)];
+	//		cell.geometry.relative = true;
+	//		cell.edge = true;
+	//		
+	//	    return this.createEdgeTemplateFromCells([cell], cell.geometry.width, cell.geometry.height, 'Curve');
+	 //	})),
 	 	this.createEdgeTemplateEntry('shape=flexArrow;endArrow=classic;startArrow=classic;html=1;', 50, 50, '', 'Bidirectional Arrow', null, lineTags + 'bidirectional'),
 	 	this.createEdgeTemplateEntry('shape=flexArrow;endArrow=classic;html=1;', 50, 50, '', 'Arrow', null, lineTags + 'directional directed'),
 	 	this.createEdgeTemplateEntry('endArrow=none;dashed=1;html=1;', 50, 50, '', 'Dashed Line', null, lineTags + 'dashed undirected no'),
